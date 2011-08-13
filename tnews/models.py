@@ -5,4 +5,4 @@ class Tweet(models.Model):
     author = models.CharField(max_length=30)
     category = models.CharField(max_length=30)
     datetime = models.CharField(max_length=30)
-    avatar = models.CharField(max_length=100)
+    avatar = models.CharField(max_length=400)
