@@ -6,7 +6,8 @@
 1) Edit '/etc/mysql/my.cnf' file.
 2) Create database 'tnews' (in MySql).
 3) Set your 'USER', 'PASSWORD' in 'settings.py'.
-4) python manage.py syncdb   - to create tables in database.
+4) python manage.py sqlall tnews
+5) python manage.py syncdb   - to create tables in database.
 
 --------------------------------------------------------------------
 python manage.py runserver
