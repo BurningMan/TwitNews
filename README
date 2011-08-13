@@ -10,6 +10,10 @@ python manage.py syncdb   - to create database with tables
 
 --------------------------------------------------------------------
 
+Put your configuration file (twitter.cnf) into the root directory. 
+
+--------------------------------------------------------------------
+
 python manage.py runserver
 Go to 'http://127.0.0.1:8000/filldb' (for fill your database).
 Go to 'http://127.0.0.1:8000' !
