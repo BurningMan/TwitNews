@@ -1,7 +1,6 @@
 from django.contrib.comments.models import Comment
 from django.conf.urls.defaults import patterns, include, url
-from homepage.views import homepage
-from tnews.views import fillDatabase
+from homepage.views import homepage, fillDatabase
 from django.conf import settings
 
 # Uncomment the next two lines to enable the admin:
@@ -27,6 +26,6 @@ urlpatterns = patterns('',
 # so we'll server also the estatic content.
 if settings.DEBUG:
         urlpatterns += patterns('',
-           (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root':'./media/'}),
+            (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root':'./media/'}),
             (r'^comments/', include('django.contrib.comments.urls')),
         )

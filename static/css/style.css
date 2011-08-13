@@ -1,0 +1,235 @@
+/* *** css by miss monorom www.intensivstation.ch *** */
+/* css released under Creative Commons License -  http://creativecommons.org/licenses/by/2.0/deed.en  */
+
+body {
+background-color: #82CAFA;
+font-size: 11px;
+font-family: Verdana, Arial, SunSans-Regular, Sans-Serif;
+color:#564b47;
+padding:0px;
+margin:0px;
+}
+
+/* ----------container to center the layout-------------- */
+#container {
+width: 900px;
+margin-left: auto;
+margin-right: auto;
+background-color: #ffffff;
+}
+
+#container img {
+padding: 0px;
+margin: 0px;
+} 
+
+/* ----------banner for logo-------------- */
+#banner {
+background-color: #82CAFA;
+text-align: left;
+padding: 0px;
+margin: 0px;
+}
+
+/* -----------------content--------------------- */
+#comments {
+background-color: #E6F1FF;
+padding: 0px;
+margin-left: 550px;
+font-size: 10pt; 
+color: #6c9fe5;
+margin-right: 50px;
+border-left: 1px solid #a3a3a3;
+}
+div#comments { 
+min-height:600px;
+height:expression(this.scrollHeight > 600 ? "auto":"600px"); 
+}
+
+
+/* --------------left navi------------- */
+#left {
+background-color: #ffffff;
+float: left;
+width: 500px;
+margin-left: 50px;
+padding: 0px;
+}
+
+/* --------------Tweets------------- */
+#tweets {
+background-color: #ffffff;
+float: left;
+font-family: Arial;
+font-size: 8pt;
+color: #8e8e8e;
+width: 500px;
+height: 570px;
+margin: 0px;
+padding: 0px;
+}
+
+/* --------------Tweet------------- */
+.tweet {
+background-color: #ffffff;
+font-family: Arial;
+float: left;
+width: 500px;
+margin: 0px;
+padding: 0px;
+height:102px; 
+color: #ffffff;
+border-bottom:1px dotted #d6d6d6;
+}
+.tweet:hover {
+color: #6c9fe5;
+background-color: #E6F1FF;
+cursor: pointer;
+}
+
+.tweet .twmenu a:hover{
+color: #6c9fe5;
+}
+
+/* --------------Tweet text------------- */
+.tweet-text {
+width: 400px;
+height: 55px;
+font-size: 10pt; 
+color: #000000; 
+font-weight: normal; 
+margin-right: 0px;
+margin-top: 30px;
+}
+
+/* --------------Tweet info------------- */
+.tweet-info {
+margin-top: 10px;
+margin-bottom: 2px;
+margin-right: 5px;
+
+}
+
+/* --------------Tweet author------------- */
+.tweet-author {
+font-size: 10pt; 
+color: #6c9fe5; 
+font-weight: bold; 
+float: left;
+}
+
+/* --------------Tweet time------------- */
+.tweet-datetime {
+color: #8e8e8e;
+font-size: 10pt;  
+float: right;
+}
+
+/* --------------Tweet img------------- */
+.tweet-img {
+float: left;
+margin: 10px;
+}
+
+/* -----------Menu tweet--------------------------- */
+.tweet-menu {
+text-align:justify !important;
+margin-top: 0px;
+margin-left: 60px;
+margin-right: 50px;
+background-color: #fffff;
+padding:0px;
+height:35px;
+overflow:hidden;
+font-family: Arial;
+font-size: 8pt;
+font-weight: normal;
+}
+.tweet-menu a {
+color:inherit;
+/*color: #8e8e8e;*/
+text-decoration:none;
+padding-top: 5px;
+padding-bottom: 6px;
+padding-left: 10px;
+padding-right: 10px;
+}
+.tweet-menu a:hover {
+text-decoration:underline;
+}
+
+/* -----------footer--------------------------- */
+#footer {
+clear: both;
+border-top: 1px solid #a3a3a3;
+margin-left: 50px;
+margin-right: 50px;
+padding: 0px;
+}
+
+/* -----------Menu--------------------------- */
+.menu {
+text-align:justify !important;
+margin-left: 50px;
+margin-right: 50px;
+background-color: #fffff;
+padding:0px;
+height:35px;
+overflow:hidden;
+font-family: Arial;
+font-size: 14pt;
+border-bottom: 1px solid #a3a3a3;
+}
+.menu a {
+color: #8e8e8e;
+text-decoration:none;
+padding-top: 5px;
+padding-bottom: 6px;
+padding-left: 10px;
+padding-right: 10px;
+}
+.menu a:hover {
+color:white;
+text-decoration:underline;
+background-color: #82CAFA;
+}
+
+/* -----------Tweets scroll up--------------------------- */
+.scrollup {
+text-align:justify !important;
+width: 500px;
+background-color: #f0f3ff;
+color: #8e8e8e;
+padding:0px;
+height:15px;
+overflow:hidden;
+font-family: Arial;
+font-size: 8pt;
+}
+
+.scrollup:hover {
+color:white;
+text-decoration:underline;
+background-color: #82CAFA;
+cursor: pointer;
+}
+
+/* -----------Tweets scroll down--------------------------- */
+.scrolldown {
+text-align:justify !important;
+width: 500px;
+background-color: #f0f3ff;
+color: #8e8e8e;
+padding:0px;
+height:15px;
+overflow:hidden;
+font-family: Arial;
+font-size: 8pt;
+}
+
+.scrolldown:hover {
+color:white;
+text-decoration:underline;
+background-color: #82CAFA;
+cursor: pointer;
+}

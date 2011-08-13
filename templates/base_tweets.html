@@ -5,7 +5,7 @@
 <script type="text/javascript">
     // Show number of comments
     function showComments(){
-        {% get_comment_count for tnews.tweet this.id as comment_count %}
+        {% get_comment_count for homepage.tweet this.id as comment_count %}
         count = {{ comment_count }};
         var comments = document.getElementById('comments');
         y=comments.childNodes[0];
