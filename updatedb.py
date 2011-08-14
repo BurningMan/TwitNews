@@ -1,10 +1,9 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
 
-os.environ["DJANGO_SETTINGS_MODULE"] = "TwitNews.settings"
+os.environ["DJANGO_SETTINGS_MODULE"] = "settings"
 
 from django.conf import settings
 from django.db import models
