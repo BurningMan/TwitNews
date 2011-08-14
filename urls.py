@@ -1,6 +1,6 @@
 from django.contrib.comments.models import Comment
 from django.conf.urls.defaults import patterns, include, url
-from homepage.views import homepage, fillDatabase
+from homepage.views import homepage, fillCategory, updateDatabase, tweetsByCategory, categories
 from django.conf import settings
 
 # Uncomment the next two lines to enable the admin:
@@ -18,8 +18,10 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
     ('^$', homepage),
-    ('^filldb/$', fillDatabase),
-    #(r'^datetime/plus/(\d{1,2})/$', hours_ahead)
+    ('^((?!categories)[^/]*)/$', tweetsByCategory),
+    ('^filldb/(.+)/$', fillCategory),
+    ('^categories/$', categories),
+    ('^updatedb/(.+)/$', updateDatabase)
 )
 
 # We're going to use the Django server in development, 
