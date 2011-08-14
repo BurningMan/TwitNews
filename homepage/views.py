@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render_to_response
 from homepage.models import Tweet
-import twitter 
 
 def homepage(request):
     tweetObjects = Tweet.objects.filter(category='it')
@@ -26,40 +25,3 @@ def tweetsByCategory(request, catg):
         return render_to_response('base_tweets.html', {'tweets': tweets,'category': catg.upper(),'title': catg})
     else: 
         return render_to_response('pageNotFound.html', )
-
-######################################################################
-
-# Fill database (default data)
-def fillCategory(request, catg):
-    timeline = twitter.get_tweets()
-    for i in timeline:
-        Tweet.objects.create(text=i.text.encode('utf-8'),
-            author=i.user.name.encode('utf-8'),
-            category=catg,
-            datetime = 'Today',
-            avatar=i.user.profile_image_url)
-    return render_to_response('filldb.html', )
-######################################################################
-def updateDatabase(request, catg):
-    tweetObjects = Tweet.objects.filter(category=catg)
-    if tweetObjects.count() > 0:
-        timeline = twitter.get_tweets()
-        j = 0
-
-        for i in timeline:
-
-            t = tweetObjects[j]
-            t.text = i.text.encode('utf-8')
-            t.author = i.user.name.encode('utf-8')
-            t.category = catg
-            t.datetime = 'Today'
-            t.avatar = i.user.profile_image_url
-            t.save()
-
-            j = j + 1
-
-        return render_to_response('filldb.html', )
-    else: 
-        return render_to_response('pageNotFound.html', )
-
-######################################################################
