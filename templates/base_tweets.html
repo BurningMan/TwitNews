@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load comments i18n %}
-{% block title %}Tweets{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 {% block scripts %}
 <script type="text/javascript">
     // Show number of comments
@@ -23,7 +23,7 @@
 		</div>
 		
 		<div id="tweets">
-				<p style="font-size: 10pt; color: #6c9fe5;">{% block tweetstype %}The most popular tweets{% endblock %}</p>
+				<p style="font-size: 10pt; color: #6c9fe5;">{% block tweetstype %}The most popular {{ category }} tweets{% endblock %}</p>
                 {% for tweet in tweets %}
                     {% if tweet.0 > 5 %}
                         <div class="tweet" id="{{ tweet.0 }}" style="display:none;" onMouseOver="changeID({{ tweet.0 }});">

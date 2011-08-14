@@ -10,7 +10,7 @@ def homepage(request):
     for t in tweetObjects:
         tweets.append([i, t])
         i = i + 1
-    return render_to_response('index.html', {'tweets': tweets})
+    return render_to_response('base_tweets.html', {'tweets': tweets,'category': '','title': 'Home'})
 
 def categories(request):
     return render_to_response('categories.html', )
@@ -23,7 +23,7 @@ def tweetsByCategory(request, catg):
         for t in tweetObjects:
             tweets.append([i, t])
             i = i + 1
-        return render_to_response('{0}.html'.format(catg), {'tweets': tweets})
+        return render_to_response('base_tweets.html', {'tweets': tweets,'category': catg.upper(),'title': catg})
     else: 
         return render_to_response('pageNotFound.html', )
 
