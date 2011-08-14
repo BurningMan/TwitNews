@@ -20,6 +20,7 @@ Go to 'http://127.0.0.1:8000/filldb/it' (to fill IT category in your database).
 !!!  it - default category  !!!
 
 'http://127.0.0.1:8000' - home page
+'http://127.0.0.1:8000/categories' - home page
 'http://127.0.0.1:8000/{category}'  - category's page
 /updatedb/{category}   - update category
 /filldb/{category}  - fill category
