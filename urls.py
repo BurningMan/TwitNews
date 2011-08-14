@@ -26,6 +26,5 @@ urlpatterns = patterns('',
 # so we'll server also the estatic content.
 if settings.DEBUG:
         urlpatterns += patterns('',
-            (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root':'./media/'}),
             (r'^comments/', include('django.contrib.comments.urls')),
         )

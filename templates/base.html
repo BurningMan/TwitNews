@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<link type="text/css" href="/media/css/style.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="{{ STATIC_URL }}css/style.css" rel="stylesheet" media="screen" />
  <title>{% block title %}{% endblock %}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript"  src="/media/js/scroll.js"></script>
+<script type="text/javascript"  src="{{ STATIC_URL }}js/scroll.js"></script>
 {% block scripts %}
 {% endblock %}
 </head>
@@ -12,7 +12,7 @@
 <div id="container">
 	<div id="banner" ><a href="/" alt="" border="0" /></a>
  		<h1>Twitter Service</h1> 
-		<img src="/media/img/top.png" alt="" border="0" />
+		<img src="{{ STATIC_URL }}img/top.png" alt="" border="0" />
 	</div>
 	<div class="menu">
 		<a href="/">Home</a>
