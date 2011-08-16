@@ -4,6 +4,9 @@ import os.path
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+LOGIN_URL = 'login'
+AUTH_PROFILE_MODULE = 'twiter.profile' 
+
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
@@ -113,6 +116,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.comments',
     'TwitNews.homepage',
+    'TwitNews.twiter',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:

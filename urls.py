@@ -1,6 +1,7 @@
 from django.contrib.comments.models import Comment
 from django.conf.urls.defaults import patterns, include, url
 from homepage.views import homepage, tweetsByCategory, categories
+from twiter.views import twitter_login, twitter_logout, twitter_authenticated, twitter_retweet
 from django.conf import settings
 
 # Uncomment the next two lines to enable the admin:
@@ -18,8 +19,12 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
     ('^$', homepage),
-    ('^((?!categories)[^/]*)/$', tweetsByCategory),
+    ('^((?!categories)(?!login)(?!logout)(?!login/authenticated)[^/]*)/$', tweetsByCategory),
     ('^categories/$', categories),
+    (r'^login/?$', twitter_login),
+    (r'^logout/?$', twitter_logout),
+    (r'^login/authenticated/?$', twitter_authenticated),
+    (r'^retweet/([^/]*)/$', twitter_retweet),
 )
 
 # We're going to use the Django server in development, 

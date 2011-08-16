@@ -8,12 +8,12 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 from django.conf import settings
 from django.db import models
 from homepage.models import Tweet 
-import twitter 
+import twitt
 
 def updateCategory(catg):
     tweetObjects = Tweet.objects.filter(category=catg)
     if tweetObjects.count():
-        timeline = twitter.get_tweets()
+        timeline = twitt.get_tweets()
         j = 0
 
         for tweet in timeline:

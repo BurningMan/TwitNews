@@ -8,11 +8,11 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 from django.conf import settings
 from django.db import models
 from homepage.models import Tweet 
-import twitter 
+import twitt 
 
 
 def fillCategory(catg):
-    timeline = twitter.get_tweets()
+    timeline = twitt.get_tweets()
     for tweet in timeline:
             Tweet.objects.create(text=tweet.text.encode('utf-8'),
                 author=tweet.user.name.encode('utf-8'),

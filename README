@@ -1,16 +1,20 @@
 Info about project 
 --------------------------------------------------------------------
 
-Twitter lib: tweepy
 Database: sqlite
 
 --------------------------------------------------------------------
+
+install libraries:
+    http://code.google.com/p/python-twitter/
+    https://github.com/simplegeo/python-oauth2
+    tweepy
    
 python manage.py syncdb   - to create database with tables
 
 --------------------------------------------------------------------
 
-Put your configuration file (twitter.cnf) into the root directory. 
+Put your configuration file (twitt.cnf) into the root directory. 
 
 --------------------------------------------------------------------
 

@@ -11,7 +11,7 @@ def homepage(request):
         tweets.append([i, tweet])
         i = i + 1
     return render_to_response('base_tweets.html', 
-            RequestContext(request, {'tweets': tweets, 'category': '', 'title': 'Home'}))
+        RequestContext(request, {'tweets': tweets, 'category': '', 'title': 'Home'}))
 
 
 def categories(request):

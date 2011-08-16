@@ -15,7 +15,7 @@ import tweepy
 import ConfigParser
 def get_tweets():
     config=ConfigParser.ConfigParser()
-    config.read('twitter.cfg')
+    config.read('twitt.cfg')
     CONSUMER_KEY=config.get('main','CONSUMER_KEY')
     CONSUMER_SECRET=config.get('main','CONSUMER_SECRET')
     ACCESS_KEY=config.get('main','ACCESS_KEY')

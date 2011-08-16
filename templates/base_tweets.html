@@ -40,7 +40,9 @@
                             <div class="tweet-text">{{ tweet.1.text }}</div>
                             <div class="tweet-menu">
 		                        <a href="#">Like</a>
-		                        <a href="#">Retweet</a>
+                                {% if user.is_authenticated %}
+		                            <a href="/retweet/{{ tweet.1.text }}">Retweet</a>
+                                {% endif %}
 		                        <a href="#" onClick="showComments();">Comments</a>
 	                        </div>
                         </div>
