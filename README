@@ -8,7 +8,6 @@ Database: sqlite
 install libraries:
     http://code.google.com/p/python-twitter/
     https://github.com/simplegeo/python-oauth2
-    tweepy
    
 python manage.py syncdb   - to create database with tables
 
@@ -31,4 +30,3 @@ python updatedb.py  - update database (default category)
 'http://127.0.0.1:8000/it'  - IT category page
 
 --------------------------------------------------------------------
-
