@@ -2,7 +2,7 @@
 {% load comments i18n %}
 {% block title %}{{ title }}{% endblock %}
 {% block scripts %}
-<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 <script type="text/javascript">
     // Show number of comments
     function showComments(){
@@ -15,11 +15,6 @@
         var textNode = document.createTextNode(text);
         comments.appendChild(textNode);
     }
-
-    function tweet(url){
-        $.get("/retweet/" + url);
-    }
-
 
 </script>
 {% endblock %}
@@ -48,7 +43,7 @@
                             <div class="tweet-menu">
 		                        <a href="#">Like</a>
                                 {% if user.is_authenticated %}
-		                            <a href="#" onClick="tweet('{{ tweet.1.text }}');">Retweet</a>
+		                            <a href="https://twitter.com/intent/tweet?original_referer=http://127.0.0.1:8000/&source=tweetbutton&text={{ tweet.1.text }}&url=http://127.0.0.1:8000/&via={{ tweet.1.author }}" >Retweet</a>
                                 {% endif %}
 		                        <a href="#" onClick="showComments();">Comments</a>
 	                        </div>
