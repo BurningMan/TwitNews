@@ -17,7 +17,7 @@
     }
 
     function tweet(url){
-        $.post("/retweet/" + url);
+        $.get("/retweet/" + url);
     }
 
 
@@ -48,7 +48,7 @@
                             <div class="tweet-menu">
 		                        <a href="#">Like</a>
                                 {% if user.is_authenticated %}
-		                            <a href="#" onClick="tweet({{ tweet.1.text }});">Retweet</a>
+		                            <a href="#" onClick="tweet('{{ tweet.1.text }}');">Retweet</a>
                                 {% endif %}
 		                        <a href="#" onClick="showComments();">Comments</a>
 	                        </div>
