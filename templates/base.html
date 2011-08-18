@@ -11,12 +11,12 @@
 <body >
 <div id="container">
 	<div id="banner" ><a href="/" alt="" border="0" /></a>
-        <div style="margin-top: 0px;">
-            <div style="font-size: 10pt; color: #6c9fe5; font-weight: bold; float: left;"><h1>Twitter Service</h1> </div>
+        <div style="margin-top: 0px; margin-bottom: 0px;">
+            <div class="logo" >Twitter News:) </div>
             {% if user.is_authenticated %}
-                <div style="color: #8e8e8e;font-size: 10pt;  float: right;"><p>Welcome, {{ user.username }}. <a href="/logout">Logout</a></p></div>
+                <div style="color: #8e8e8e;font-size: 8pt;  float: right;"><p>Welcome, {{ user.username }}. <a href="/logout">Logout</a></p></div>
             {% else %}
-                <div style="color: #8e8e8e;font-size: 10pt;  float: right;"> <a href="/login">Sign in with Twitter</a></div>
+                <div class="singin"><a href="/login"></a></div>
             {% endif %}
         </div>
 		<img src="{{ STATIC_URL }}img/top.png" alt="" border="0" />

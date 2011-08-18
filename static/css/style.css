@@ -47,6 +47,39 @@ height:expression(this.scrollHeight > 600 ? "auto":"600px");
 }
 
 
+/* --------------Logo------------- */
+.logo {
+font-size: 18pt; 
+color: #ffffff; 
+font-weight: bold; 
+float: left;
+margin-top: 2px;
+margin-bottom: 0px;
+}
+.logo:hover {
+cursor: pointer;
+}
+
+/* --------------singin------------- */
+.singin {
+margin-top: 10px;
+margin-bottom: 2px;
+float: right;
+}
+
+.singin a:link, .singin a:visited{
+width:150px;
+height:23px;
+display:block;
+overflow:hidden;
+background: url(twitter_signin.png) 0px -25px no-repeat;
+} 
+
+.singin a:hover  {
+background-position: 0px -49px;
+cursor: pointer;
+}
+
 /* --------------left navi------------- */
 #left {
 background-color: #ffffff;
@@ -55,6 +88,7 @@ width: 500px;
 margin-left: 50px;
 padding: 0px;
 }
+
 
 /* --------------Tweets------------- */
 #tweets {
@@ -233,3 +267,4 @@ text-decoration:underline;
 background-color: #82CAFA;
 cursor: pointer;
 }
+
