@@ -14,7 +14,7 @@ class Status:
         self.from_user=from_user
         self.text=text
         self.to_user_id=to_user_id
-        self.id_str=id
+        self.id=id
         self.geo=geo
         self.from_user_id=from_user_id
         self.source=source
